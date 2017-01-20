@@ -1,0 +1,465 @@
+<!--contains date,city,theatre inside model-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>seats | BookMovie.com project</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet "href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/scss" href="css/app.scss">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+
+  <div class="col-lg-8 col-sm-8 col-md-8 col-xl-4">
+    <table class="table">
+      <center>
+        <br><br>
+
+      <form>
+        <h4>Select class</h4>
+        <select id="selectClass" class="selectClass">
+          <option value=""></option>
+          <!-- <option value="Platinum">Platinum class </option> -->
+          <option value="Gold">Gold class</option>
+          <option value="Silver">Silver class</option>
+          <!-- <option value="Silver seats">All included</option> -->
+        </select>
+      </form>
+
+      <form>
+        <h4>Select Number of Seats</h4>
+         <select id="selectSeats" class="selectSeats">
+           <option value="1">1</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5</option>
+           <option value="6">6</option>
+           <option value="7">7</option>
+           <option value="8">8</option>
+           <option value="9">9</option>
+           <option value="10">10</option>
+        </select>
+      </form>
+
+
+        <!--<h3>Platinum seats <small>Rs 200/-</small></h3>
+          <p>
+            <form>
+              <div class="A" id="A">
+
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                  <div class="glyphicon glyphicon-print">P01</div>
+                </input>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                  <div class="glyphicon glyphicon-print">P02</div>
+                </input>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P03</div>
+                </input>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P04</div>
+                </input>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P05</div>
+                </input>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P06</div>
+                </input>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P07</div>
+                </input>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P08</div>
+                </input>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P09</div>
+                </input>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P10</div>
+                </input>
+              </div>
+
+            </div>
+            </form>
+
+             <div class="glyphicon glyphicon-print"><a href="">G02</div>
+             <div class="glyphicon glyphicon-print"><a href="">G03</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G04</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G05</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G06</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G07</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G08</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G09</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G10</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G11</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G12</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G13</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G14</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G15</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G16</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G17</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G18</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G19</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G20</a></div>
+          </p>-->
+          <!--<p>
+            <form>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P11</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P12</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P13</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P14</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P15</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P16</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P17</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="pclass" value="200">
+                <div class="glyphicon glyphicon-print">P18</div>
+              </div>
+            </form>
+
+              <div class="glyphicon glyphicon-print"><a href="">G21</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G22</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G23</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G24</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G25</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G26</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G27</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G28</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G29</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G30</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G31</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G32</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G33</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G34</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G35</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G36</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">G37</a></div>
+          </p>-->
+
+        <h3>Golden seats <small>Rs 200/- <!--<span class="label label-success">Balcany</span>--></small></h3>
+          <p>
+            <form>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200"></input>
+                <div class="glyphicon glyphicon-print">G01</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G02</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G03</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G04</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G05</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G06</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G07</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G08</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G09</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G10</div>
+              </div>
+            </form>
+             <!-- <div class="glyphicon glyphicon-print"><a href="">S01</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S02</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S03</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S04</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S05</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S06</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S07</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S08</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S09</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S10</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S11</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S12</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S13</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S14</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S15</a></div> -->
+          </p>
+          <p>
+            <form>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G11</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G12</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G13</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G14</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G15</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G16</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G17</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="gclass" value="200">
+                <div class="glyphicon glyphicon-print">G18</div>
+              </div>
+            </form>
+             <!-- <div class="glyphicon glyphicon-print"><a href="">S16</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S17</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S18</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S19</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S20</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S21</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S22</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S23</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S24</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S25</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S26</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">S27</a></div> -->
+          </p>
+
+          <h3>Silver seats <small>Rs 170/-</small></h3>
+          <!--<p>
+
+              <div class="glyphicon glyphicon-print"><a href="">P01</a></div>
+            </form>
+             <div class="glyphicon glyphicon-print"><a href="">P02</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P03</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P04</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P05</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P06</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P07</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P08</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P09</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P10</a></div>
+          </p>-->
+          <p>
+            <form>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S01</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S02</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S03</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S04</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S05</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S06</div>
+              </div>
+              <!-- <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="120">
+                <div class="glyphicon glyphicon-print">S07</div>
+              </div> -->
+            </form>
+             <!-- <div class="glyphicon glyphicon-print"><a href="">P11</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P12</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P13</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P14</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P15</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P16</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P17</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P18</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P19</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P20</a></div> -->
+          </p>
+          <p>
+            <form>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S08</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S09</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S10</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S11</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S12</div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="170">
+                <div class="glyphicon glyphicon-print">S13</div>
+              </div>
+              <!-- <div class="checkbox-inline">
+                <input type="checkbox" class="sclass" value="120">
+                <div class="glyphicon glyphicon-print">S14</div>
+              </div> -->
+            </form>
+             <!-- <div class="glyphicon glyphicon-print"><a href="">P21</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P22</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P23</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P24</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P25</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P26</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P27</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P28</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P29</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">P30</a></div>
+          </p>-->
+
+          <!-- <h3>Couch Seats <small>RS 350/- <span class="label label-success">Limited seats</span></small></h3>
+          <p>
+            <form>
+              <div class="checkbox-inline">
+                <input type="checkbox" value="">
+                <div class="glyphicon glyphicon-print"><a href=""><C01></C01></a></div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" value="">
+                <div class="glyphicon glyphicon-print"><a href="">C02</a></div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" value="">
+                <div class="glyphicon glyphicon-print"><a href="">C03</a></div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" value="">
+                <div class="glyphicon glyphicon-print"><a href="">C04</a></div>
+              </div>
+              <div class="checkbox-inline">
+                <input type="checkbox" value="">
+                <div class="glyphicon glyphicon-print"><a href="">C05</a></div>
+              </div>
+            </form>
+
+             <div class="glyphicon glyphicon-print"><a href="">C01</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">C02</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">C03</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">C04</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">C05</a></div>
+             <div class="glyphicon glyphicon-print"><a href="">C06</a></div>
+
+          </p> -->
+
+
+      </center>
+    </table>
+  <center>
+    <h4>Towards screen </h4>
+    <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+    <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+    <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+    <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+    <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+    <hr style="border:3px solid gray">
+
+    <button ng-click="bookMovie(movie)" class="button-color book btn btn-primary">Confirm</button>
+  </center>
+
+
+  </div><!-- col-sm-8 ends>-->
+  <table>
+    <center>
+     <div class="col-lg-4 col-sm-4 col-md-4 col-xl-8">
+       <br><br>
+       <h3>Total seats</h3>
+       <p>30</p>
+       <br>
+       <h3>Total prize</h3>
+       <p>Rs xxx/- </p>
+     </div>
+    </center>
+  </table>
+</div><!--container-fluid ends-->
+
+</body>
+</html>

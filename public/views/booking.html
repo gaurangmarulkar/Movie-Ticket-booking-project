@@ -1,0 +1,53 @@
+<center>
+<nav class="navbar navbar-default navbar-fixed-left navbar-offset">
+  <h4>Admin panel</h4>
+    <ul class="nav">
+      <!--<li><a href="#/"><i class="fa fa-home"></i> Home</a></li>-->
+      <li><a href="#/city"><i class="fa fa-map-marker" aria-hidden="true"></i> City</a></li>
+      <li><a href="#/time"><i class="fa fa-clock-o" aria-hidden="true"></i> Show Timings</a></li>
+      <li><a href="#/theatre"><i class="fa fa-ticket" aria-hidden="true"></i> Theatre</a></li>
+      <li><a href="#/booking"><i class="fa fa-film" aria-hidden="true"></i> Movies</a></li>
+      <li><a href="#/"><i class="fa fa-retweet" aria-hidden="true"></i> Assign movies</a></li>
+      <!-- <li><a href="#/"><i class="fa fa-gift" aria-hidden="true"></i> Offers</a></li>
+      <li><a href="#/"><i class="fa fa-inr" aria-hidden="true"></i> Ticket prize</a></li>
+      <li><a href="#/"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i> Trailers, ratings and reviews</a></li> -->
+    </ul>
+    <br>
+</nav>
+</center>
+
+<div class="nav1">
+    <center>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Enter movie name</th>
+                    <th>Add/Remove</th>
+                    <th>Update/Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input ng-model="movi.moviTitle" /></td>
+                    <!-- <td><button ng-click="addMovie(movi)" class="btn btn-success">Add </button></td> -->
+                    <td><button ng-click="addMovie(movi)" class="btn btn-success">
+  <i class="fa fa-plus"></i></button></td>
+
+                    <!-- <td><button ng-click="updateMovie(movi)" class="btn btn-primary">Update</button></td> -->
+                    <td><button ng-click="updateMovie(movi)" class="btn btn-primary">
+  <i class="fa fa-sign-in fa-rotate-270"></i></button></td>
+                </tr>
+                <tr ng-repeat="movi in moviList">
+                    <td>{{movi.moviTitle}}</td>
+                    <!--<td>{{movi.movidirector}}</td>-->
+                    <!-- <td><button ng-click="removeMovie(movi)" class="btn btn-danger">Remove</button></td> -->
+                    <td><button ng-click="removeMovie(movi)" class="btn btn-danger">
+  <i class="fa fa-trash-o"></i></button></td>
+                    <!-- <td><button ng-click="editMovie(movi)" class="btn btn-warning">Edit</button></td> -->
+                    <td><button ng-click="editMovie(movi)" class="btn btn-warning">
+  <i class="fa fa-pencil-square-o"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+  </div>

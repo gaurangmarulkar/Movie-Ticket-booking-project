@@ -1,0 +1,150 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+  <center>
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Enter movie name</th>
+                  <th>Add/Remove</th>
+                  <th>Update/Edit</th>
+              </tr>
+          </thead>
+        </table>
+
+<tr>
+<td><select>
+  <option value="">City</option>
+  <option value="volvo">Volvo</optio>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+</td>
+
+<td><select>
+  <option value="">Theatre</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+</td>
+
+<td><select>
+  <option value="">Movie</option>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+</td>
+
+</tr>
+</center>
+</body>
+</html> -->
+<center>
+<nav class="navbar navbar-default navbar-fixed-left navbar-offset">
+  <h4>Admin panel</h4>
+    <ul class="nav">
+      <li><a href="#/city"><i class="fa fa-map-marker" aria-hidden="true"></i> City</a></li>
+      <li><a href="#/time"><i class="fa fa-clock-o" aria-hidden="true"></i> Show Timings</a></li>
+      <li><a href="#/theatre"><i class="fa fa-ticket" aria-hidden="true"></i> Theatre</a></li>
+      <li><a href="#/booking"><i class="fa fa-film" aria-hidden="true"></i> Movies</a></li>
+      <li><a href="#/"><i class="fa fa-retweet" aria-hidden="true"></i> Assign movies</a></li>
+    </ul>
+    <br>
+</nav>
+</center>
+<div class="nav1">
+  <center>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Assign movie</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <td>
+          <!-- <div ng-app="movieApp" data-ng-controller="TheatreController as theChildController"> -->
+            <!-- City: <select ng-model="assignmovie.assignmoviePlace">
+                    <option ng-repeat="place in cityList"> {{place.placeName}} </option>
+                  </select>
+          </div> -->
+      City: <select ng-model="assignmovie.assignmoviePlace">
+            <option ng-repeat="place in cityList">{{place.placeName}}</option>
+          </select>
+        </td>
+
+        <td>
+          <!-- <div ng-app="movieApp" data-ng-controller="TheatreController as theChildController"> -->
+            Theatre: <select ng-model="assignmovie.assignmovieThea">
+                        <option ng-repeat="thea in theatreList | filter: assignmovie.assignmoviePlace">{{thea.theaName}}</option>
+                      </select>
+          </div>
+        </td>
+
+        <td>
+          <!-- <div ng-app="movieApp" data-ng-controller="BookingController as theChildController"> -->
+            Movie: <select ng-model="assignmovie.assignmovieMovie">
+                      <option ng-repeat="movi in moviList"> {{ movi.moviTitle }} </option>
+                  </select>
+          </div>
+        </td>
+
+        <td>
+          FromDate: <input type="date" name="fromDate" id="fromDate" ng-model="assignmovie.assignmovieFromdate" >
+          <!-- <input type="time" ng-model="assignmovie.assignmovieFromdate"> -->
+        </td>
+
+        <td>
+          ToDate: <input type="date"name="fromDate" id="toDate"  ng-model="assignmovie.assignmovieTodate">
+        </td>
+
+
+
+        <!-- <td>
+          <div ng-app="movieApp" data-ng-controller="TheatreController as theChildController">
+            theatre: <select id="theatreSelect"  class="theatreSelect" multiple="multiple">
+                        <option ng-repeat="thea in theatreList" >{{thea.theaName}}</option>
+                      </select>
+          </div>
+        </td> -->
+
+
+
+          <!-- <td><input ng-model="assignmovie.assignmovieList"/></td>connects angular with html-->
+
+          <td><button ng-click="addAssignmovie(assignmovie)" class="btn btn-success">
+          <i class="fa fa-plus"></i></button></td>
+
+          <td><button ng-click="updateAssignmovie(assignmovie)" class="btn btn-primary">
+          <i class="fa fa-sign-in fa-rotate-270"></i></button></td>
+
+
+
+      <td>
+        <tr ng-repeat="assignmovie in assignmovieList">
+          <td>{{assignmovie.assignmoviePlace}}</td>
+          <td>{{assignmovie.assignmovieThea}}</td>
+          <td>{{assignmovie.assignmovieMovie}}</td><!--<td>{{movi.cityName}}</td>-->
+          <td>{{assignmovie.assignmovieFromdate}}</td>
+          <td>{{assignmovie.assignmovieTodate}}</td>
+
+
+        <td><button ng-click="removeAssignmovie(assignmovie)" class="btn btn-danger">
+          <i class="fa fa-trash-o"></i></button></td>
+
+        <td><button ng-click="editAssignmovie(assignmovie)" class="btn btn-warning">
+          <i class="fa fa-pencil-square-o"></i></button></td>
+
+        </tr>
+      </td>
+
+      </tbody>
+    </table>
+  </center>
+</div>

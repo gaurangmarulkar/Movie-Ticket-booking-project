@@ -1,0 +1,62 @@
+<center>
+<nav class="navbar navbar-default navbar-fixed-left navbar-offset">
+  <h4>Admin panel</h4>
+    <ul class="nav">
+      <li><a href="#/city"><i class="fa fa-map-marker" aria-hidden="true"></i> City</a></li>
+      <li><a href="#/time"><i class="fa fa-clock-o" aria-hidden="true"></i> Show Timings</a></li>
+      <li><a href="#/theatre"><i class="fa fa-ticket" aria-hidden="true"></i> Theatre</a></li>
+      <li><a href="#/booking"><i class="fa fa-film" aria-hidden="true"></i> Movies</a></li>
+      <li><a href="#/"><i class="fa fa-retweet" aria-hidden="true"></i> Assign movies</a></li>
+    </ul>
+    <br>
+</nav>
+</center>
+<div class="nav1">
+    <center>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  <!-- <form action="action_page.php">
+                    <h4>Enter Day</h4>
+                    <input type="date" name="day">
+                    <input type="submit">
+                  </form> -->
+                  <!-- <td><input ng-model="clock.clockName" type="date" name=""></input></td>
+                  <td><input ng-model="clock.clockName" type="time" name=""></input></td> -->
+                </th>
+              </tr>
+                <tr>
+                    <th>Enter time</th>
+                    <th>Add/Remove</th>
+                    <th>Update/Edit</th>
+                    <!-- <th>Time</th> -->
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                    <td><input ng-model="clock.clockTime" id="time" type="time"/></td>  <!--<td><input ng-model="clock.clockName" /></td>-->
+                    <!-- <td><input ng-model="clock.clockName" type="time" name="user_time" /></td>-->
+                    <!-- <td><button ng-click="addTime(clock)" class="btn btn-success">Add </button></td>
+                    <td><button ng-click="updateTime(clock)" class="btn btn-primary">Update</button></td> -->
+                    <td><button ng-click="addTime(clock)" class="btn btn-success">
+                    <i class="fa fa-plus"></i></button></td>
+                    <td><button ng-click="updateTime(clock)" class="btn btn-primary">
+                    <i class="fa fa-sign-in fa-rotate-270"></i></button></td>
+
+                </tr>
+                <tr ng-repeat="clock in timeList">
+                    <td>{{clock.clockTime | date:'HH:mm a'}}</td>
+                    <!-- <td><button ng-click="removeTime(clock)" class="btn btn-danger">Remove</button></td>
+                    <td><button ng-click="editTime(clock)" class="btn btn-warning">Edit</button></td> -->
+                    <td><button ng-click="removeTime(clock)" class="btn btn-danger">
+                      <i class="fa fa-trash-o"></i></button></td>
+                    <td><button ng-click="editTime(clock)" class="btn btn-warning">
+                      <i class="fa fa-pencil-square-o"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</div>
